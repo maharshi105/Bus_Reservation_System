@@ -11,6 +11,18 @@ namespace bus_reservation_system
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] == null)
+            {
+                login.Visible = true;
+                signup.Visible = true;
+                logout.Visible = false;
+            }
+            else
+            {
+                login.Visible = false;
+                signup.Visible = false;
+                logout.Visible = true;
+            }
 
         }
 
@@ -27,6 +39,12 @@ namespace bus_reservation_system
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("userlogin.aspx");
+        }
+
+        protected void logout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("/userlogin.aspx");
         }
     }
 }

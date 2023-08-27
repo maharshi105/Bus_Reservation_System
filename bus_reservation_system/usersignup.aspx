@@ -10,7 +10,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h3>Member Signup</h3>
+                           <h3>Signup</h3>
                         </center>
                      </div>
                   </div>
@@ -21,28 +21,23 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <label>Member id</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID"></asp:TextBox>
-                        </div>
-                         <br />
                         <label>Name</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Name"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="name" runat="server" placeholder="Name"></asp:TextBox>
                         </div>
                          <br />
                         <label>Email</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="email" runat="server" placeholder="Email"></asp:TextBox>
                         </div>
                          <br />
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="password" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
                          <br />
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block" ID="Button1" runat="server" Text="Signup" />
+                           <asp:Button class="btn btn-success btn-block" ID="Button1" runat="server" Text="Signup" OnClick="Button1_Click" />
                         </div>
                          <br> 
 

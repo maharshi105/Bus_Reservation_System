@@ -11,6 +11,14 @@ namespace bus_reservation_system
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] == null)
+            {
+                Response.Redirect("/userlogin.aspx");
+            }
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

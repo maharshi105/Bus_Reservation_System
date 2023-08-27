@@ -67,7 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adminlogin.aspx" />
+    <Content Include="App_Data\bus_reservation_database.mdf" />
+    <Content Include="App_Data\bus_reservation_database_log.ldf">
+      <DependentUpon>bus_reservation_database.mdf</DependentUpon>
+    </Content>
+    <Content Include="book.aspx" />
     <Content Include="bootstrap\css\cdn.jsdelivr.net_npm_bootstrap%405.3.1_dist_css_bootstrap.min.css" />
     <Content Include="bootstrap\js\ajax.googleapis.com_ajax_libs_jquery_3.6.4_jquery.min.js" />
     <Content Include="bootstrap\js\cdn.jsdelivr.net_npm_%40popperjs_core%402.11.8_dist_umd_popper.min.js" />
@@ -77,15 +81,14 @@
     <Content Include="userlogin.aspx" />
     <Content Include="usersignup.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminlogin.aspx.cs">
-      <DependentUpon>adminlogin.aspx</DependentUpon>
+    <Compile Include="book.aspx.cs">
+      <DependentUpon>book.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="adminlogin.aspx.designer.cs">
-      <DependentUpon>adminlogin.aspx</DependentUpon>
+    <Compile Include="book.aspx.designer.cs">
+      <DependentUpon>book.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>
@@ -115,13 +118,6 @@
     </Compile>
     <Compile Include="usersignup.aspx.designer.cs">
       <DependentUpon>usersignup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

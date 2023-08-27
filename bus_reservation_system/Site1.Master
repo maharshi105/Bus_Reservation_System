@@ -21,36 +21,25 @@
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="/homepage.aspx">Bus Reservation Systumm</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="homepage.aspx">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <ul class="navbar-nav">
                         <li class="nav-item active">
                             <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">View Books</asp:LinkButton>
                         </li>
                         
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="login" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="signup" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server">Logout</asp:LinkButton>
+                            <asp:LinkButton class="nav-link" ID="logout" runat="server" OnClick="logout_Click">Logout</asp:LinkButton>
                         </li>
-
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">Hello user</asp:LinkButton>
- 
                   </ul>
 
                 </div>
@@ -62,11 +51,6 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
-            <footer>
-                <p> 
-                    <asp:LinkButton class="footerlinks" ID="LinkButto1" runat="server" OnClick="LinkButto1_Click">  Admin Login</asp:Linkbutton>
-                </p>
-            </footer>
         </div>
     </form>
 </body>
