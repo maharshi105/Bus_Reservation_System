@@ -16,19 +16,16 @@ namespace bus_reservation_system
                 login.Visible = true;
                 signup.Visible = true;
                 logout.Visible = false;
+                dashboard.Visible = false;
             }
             else
             {
                 login.Visible = false;
                 signup.Visible = false;
+                dashboard.Visible=true;
                 logout.Visible = true;
             }
 
-        }
-
-        protected void LinkButto1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("adminlogin.aspx");
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)
@@ -46,5 +43,6 @@ namespace bus_reservation_system
             Session.Clear();
             Response.Redirect("/userlogin.aspx");
         }
+
     }
 }

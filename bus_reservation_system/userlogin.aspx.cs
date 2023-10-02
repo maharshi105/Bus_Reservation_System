@@ -16,7 +16,12 @@ namespace bus_reservation_system
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+      //  protected void Button1_Click(object sender, EventArgs e)
+       // {
+
+       // }
+
+        protected void Login_Click(object sender, EventArgs e)
         {
             string Email = email.Text;
             string Password = password.Text;
@@ -33,11 +38,18 @@ namespace bus_reservation_system
                     cmd.Parameters.AddWithValue("@email", Email);
                     cmd.Parameters.AddWithValue("@password", Password);
                     SqlDataReader reader = cmd.ExecuteReader();
-                    if(reader.Read()) {
+                    if (reader.Read())
+                    {
                         Session["id"] = reader["UserId"].ToString();
                         Session["email"] = Email;
                         Session["isAdmin"] = reader["isAdmin"];
                         Response.Redirect("/homepage.aspx");
+                    }
+                    else
+                    {
+                        // Display an error message for invalid credentials
+                        errorLabel.Text = "Invalid email or password.";
+                        errorLabel.Visible = true;
                     }
                 }
             }
@@ -46,5 +58,6 @@ namespace bus_reservation_system
                 Console.WriteLine(ex.Message);
             }
         }
+
     }
 }

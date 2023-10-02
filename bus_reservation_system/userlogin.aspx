@@ -30,9 +30,11 @@
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="password" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
+                                    <asp:Label ID="errorLabel" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+
                          <br />
                         <div class="form-group">
-                           <asp:Button class="btn btn-success btn-block" ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                           <asp:Button class="btn btn-success btn-block" ID="Button1" runat="server" Text="Login" OnClick="Login_Click" />
                         </div>
                          <br> 
                         

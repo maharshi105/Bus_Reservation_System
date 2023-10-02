@@ -13,43 +13,42 @@
 
     <script src="datatable/js/cdn.datatables.net_1.13.6_js_jquery.dataTables.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="/homepage.aspx">Bus Reservation Systumm</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">View Books</asp:LinkButton>
-                        </li>
-                        
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="login" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
-                        </li>
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="signup" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
-                        </li>
-                        <li class="nav-item active">
-                            <asp:LinkButton class="nav-link" ID="logout" runat="server" OnClick="logout_Click">Logout</asp:LinkButton>
-                        </li>
-                  </ul>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/homepage.aspx">Bus Reservation System</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a href="/dashboard.aspx" class="nav-link" id="dashboard" runat="server">DashBoard</a>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="login" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="signup" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="logout" runat="server" OnClick="logout_Click">Logout</asp:LinkButton>
+                            </li>
 
+
+                        </ul>
+
+                    </div>
                 </div>
-              </div>
             </nav>
         </div>
 
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
             </asp:ContentPlaceHolder>
         </div>
     </form>

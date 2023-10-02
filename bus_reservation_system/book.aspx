@@ -2,14 +2,17 @@
 
 <asp:Content ID="bookContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container my-5 ">
-        
+        <asp:Label ID="errorLabel" runat="server" Text=""></asp:Label>
         <div class="my-2 row">
 
             <div class="col">
-                <asp:DropDownList CssClass="form-select" ID="seatDropDown" runat="server">
+                <label>Seats
+                </label>
+                &nbsp;<asp:DropDownList CssClass="form-select" ID="seatDropDown" runat="server" >
                 </asp:DropDownList>
             </div>
             <div class="col">
+               <label>         </label>
                 <asp:TextBox ID="bookdate" runat="server" CssClass="form-control" TextMode="Date" AutoPostBack="True" OnTextChanged="bookdate_TextChanged"></asp:TextBox>
             </div>
         </div>
